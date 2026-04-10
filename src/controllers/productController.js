@@ -10,7 +10,7 @@ const getProducts = async (req, res, next) => {
     const { 
       page = 1, limit = 10, 
       search = "", category, 
-      sortBy = "createdAt", order = "desc", } = req.query; 
+      sortBy = "createdAt", order = "desc",minPrice, maxPrice, inStock } = req.query; 
  
     const skip = (parseInt(page) - 1) * parseInt(limit); 
  
